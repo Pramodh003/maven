@@ -1,6 +1,6 @@
 node('master') 
 {
-    stage('ContinuousDevelopment') 
+    stage('ContinuousDevelopment_master') 
     {
     git 'https://github.com/selenium-saikrishna/maven.git'
     }
