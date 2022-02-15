@@ -10,7 +10,7 @@ node('master')
     }
     stage('ContinuousDeploy')
     {
-        sh 'scp /home/ubuntu/.jenkins/workspace/scriptedpipline/webapp/target/webapp.war ubuntu@172.31.41.245:/var/lib/tomcat8/webapps/testenv.war'
+        sh 'scp /home/ubuntu/.jenkins/workspace/scriptedpipline/webapp/target/webapp.war ubuntu@172.31.46.231:/var/lib/tomcat8/webapps/testenv.war'
     }
     stage('ContinuousTesting')
     {
@@ -20,7 +20,7 @@ node('master')
     stage('ContinuousDelivery')
     {
         input 'Waiting for approval form the delivery manager'
-        sh 'scp /home/ubuntu/.jenkins/workspace/scriptedpipline/webapp/target/webapp.war ubuntu@172.31.41.245:/var/lib/tomcat8/webapps/testenv.war'
+        sh 'scp /home/ubuntu/.jenkins/workspace/scriptedpipline/webapp/target/webapp.war ubuntu@172.31.33.149:/var/lib/tomcat8/webapps/testenv.war'
     }
     
 }
